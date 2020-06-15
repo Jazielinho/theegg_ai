@@ -43,6 +43,7 @@ def main():
     float_numero = input("Ingrese numero decimal:\t")
     string_info = input("Desea que la salia sea string? Si o No?: ")
     get_fraccion_irreducible(float_numero=float_numero, return_string=string_info.lower() == 'si')
+    input("presione ENTER para cerrar la aplicacion")
 
 
 if __name__ == '__main__':
