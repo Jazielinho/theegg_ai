@@ -14,11 +14,15 @@ get_fraccion_irreducible <- function(float_numero, return_string=TRUE){
   # :return:
 
   float_numero <- as.numeric(float_numero)
-
-  num_decimal <- nchar(strsplit(as.character(float_numero), '[.]')[[1]][2])
+  
+  split_number <- strsplit(as.character(float_numero), '[.]')[[1]]
+  no_decimal <- split_number[1]
+  decimal <- split_number[2]
+  
+  num_decimal <- nchar(decimal)
 
   denominador <- 10 ^ num_decimal
-  numerador <- float_numero * denominador
+  numerador <- (10 ^ num_decimal) * as.integer(no_decimal) + as.integer(decimal)
 
   mcd <- get_mcd(a=numerador, b=denominador)
 

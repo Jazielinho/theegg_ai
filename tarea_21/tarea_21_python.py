@@ -26,7 +26,7 @@ def get_fraccion_irreducible(float_numero, return_string=True):
         no_decimal = split_number[0]
         decimal = split_number[1]
 
-        num_decimal = len(split_number[1])
+        num_decimal = len(decimal)
         denominador = 10 ** num_decimal
         numerador = (10 ** num_decimal) * int(no_decimal) + int(decimal)
 
