@@ -19,11 +19,11 @@ Intentaré hacerlo en Python y R.
 
 Ejemplo en Python:
 
-![](D:\00_EGG_AI\Git\theegg_ai\tarea_22\ejemplo_python.PNG)
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_22/ejemplo_python.PNG)
 
 
 
 Ejemplo en R:
 
-![](D:\00_EGG_AI\Git\theegg_ai\tarea_22\ejemplo_R.PNG)
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_22/ejemplo_R.PNG)
 
