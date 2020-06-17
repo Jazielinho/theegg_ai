@@ -7,7 +7,7 @@ get_mcd <- function(a, b){
   }
 
 
-get_fraccion_irreducible <- function(float_numero, return_string=TRUE){
+get_fraccion_irreducible <- function(float_numero){#, return_string=TRUE){
   # Funcion que dado un numero muestra la fraccion irreducible
   # :param float_numero: numero float, preferiblemente decimal
   # :param return_string: Indicar si el resultado se quiere en formato fraccion (/) o separado por comas (,)
@@ -29,19 +29,21 @@ get_fraccion_irreducible <- function(float_numero, return_string=TRUE){
   denominador <- denominador / mcd
   numerador <- numerador / mcd
 
-  if (return_string){
-    print(paste(numerador, "/", denominador))
-  }else{
-    print(paste(numerador, ",", denominador))
-  }
+  print(paste(numerador, "/", denominador))
+
+  #if (return_string){
+  #  print(paste(numerador, "/", denominador))
+  #}else{
+  #  print(paste(numerador, ",", denominador))
+  #}
 }
 
 
 main <- function () {
   float_numero <- readline(prompt = "Ingrese numero decimal:\t")
-  string_info <- readline(prompt = "Desea que la salia sea string? Si o No?: ")
-  get_fraccion_irreducible(float_numero = float_numero,
-                           return_string = tolower(string_info) == 'si')
+  #string_info <- readline(prompt = "Desea que la salia sea string? Si o No?: ")
+  get_fraccion_irreducible(float_numero = float_numero)#,
+                           #return_string = tolower(string_info) == 'si')
 }
 
 if (!interactive()){

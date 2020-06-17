@@ -12,7 +12,7 @@ def get_mcd(a, b):
         return get_mcd(b, a % b)
 
 
-def get_fraccion_irreducible(float_numero, return_string=True):
+def get_fraccion_irreducible(float_numero):#, return_string=True):
     '''
     Funcion que dado un numero muestra la fraccion irreducible
     :param float_numero: numero float, preferiblemente decimal
@@ -35,18 +35,19 @@ def get_fraccion_irreducible(float_numero, return_string=True):
         denominador = denominador / mcd
         numerador = numerador / mcd
 
-        if return_string:
-            print(f"{int(numerador)} / {int(denominador)}")
-        else:
-            print(f"{int(numerador)},  {int(denominador)}")
+        print(f"{int(numerador)} / {int(denominador)}")
+        # if return_string:
+        #     print(f"{int(numerador)} / {int(denominador)}")
+        # else:
+        #     print(f"{int(numerador)},  {int(denominador)}")
     except Exception as e:
         print(f"Error obteniendo la fraccion irreducible de {float_numero}, {e}")
 
 
 def main():
     float_numero = input("Ingrese numero decimal:\t")
-    string_info = input("Desea que la salia sea string? Si o No?: ")
-    get_fraccion_irreducible(float_numero=float_numero, return_string=string_info.lower() == 'si')
+    # string_info = input("Desea que la salia sea string? Si o No?: ")
+    get_fraccion_irreducible(float_numero=float_numero)#, return_string=string_info.lower() == 'si')
     input("presione ENTER para cerrar la aplicacion")
 
 
