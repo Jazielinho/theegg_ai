@@ -10,9 +10,11 @@ en la siguiente tarea, el alumno debe construir una comunicación cifrada entre 
 Ejemplo en Python:
 
 * Encriptar
+
 ![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_23/ejemplo_python_encriptar.PNG)
 
 * Desencriptar
+
 ![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_23/ejemplo_python_desencriptar.PNG)
 
 
