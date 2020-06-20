@@ -4,5 +4,8 @@ En este caso hay que desarrollar un programa donde una vez enviado un valor deci
 
 * Ejemplo en Python
 
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_24/ejemplo_python.PNG)
 
 * Ejemplo en R
+
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_24/ejemplo_R.PNG)
