@@ -8,3 +8,8 @@ fracción irreducible es 1/4, que está formada por un numerador y un denominado
 sí.
 
 Intentaré hacerlo en Python y R.
+
+Ejemplo en Python:
+
+
+Ejemplo en R:

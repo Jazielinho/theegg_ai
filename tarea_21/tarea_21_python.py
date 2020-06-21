@@ -12,7 +12,7 @@ def get_mcd(a, b):
         return get_mcd(b, a % b)
 
 
-def get_fraccion_irreducible(float_numero):#, return_string=True):
+def get_fraccion_irreducible(float_numero):
     '''
     Funcion que dado un numero muestra la fraccion irreducible
     :param float_numero: numero float, preferiblemente decimal
@@ -22,32 +22,32 @@ def get_fraccion_irreducible(float_numero):#, return_string=True):
     try:
         float_numero = float(float_numero)
 
-        split_number = str(float_numero).split('.')
-        no_decimal = split_number[0]
-        decimal = split_number[1]
+        if 0.0001 <= float_numero <= 0.9999:
 
-        num_decimal = len(decimal)
-        denominador = 10 ** num_decimal
-        numerador = (10 ** num_decimal) * int(no_decimal) + int(decimal)
+            split_number = str(float_numero).split('.')
+            no_decimal = split_number[0]
+            decimal = split_number[1]
 
-        mcd = get_mcd(a=numerador, b=denominador)
+            num_decimal = len(decimal)
+            denominador = 10 ** num_decimal
+            numerador = (10 ** num_decimal) * int(no_decimal) + int(decimal)
 
-        denominador = denominador / mcd
-        numerador = numerador / mcd
+            mcd = get_mcd(a=numerador, b=denominador)
 
-        print(f"{int(numerador)} / {int(denominador)}")
-        # if return_string:
-        #     print(f"{int(numerador)} / {int(denominador)}")
-        # else:
-        #     print(f"{int(numerador)},  {int(denominador)}")
+            denominador = denominador / mcd
+            numerador = numerador / mcd
+
+            print(f"{int(numerador)} / {int(denominador)}")
+        else:
+            print(f"Numero {float_numero} no permitido, escriba entre 0.0001 y 0.9999")
+
     except Exception as e:
         print(f"Error obteniendo la fraccion irreducible de {float_numero}, {e}")
 
 
 def main():
     float_numero = input("Ingrese numero decimal:\t")
-    # string_info = input("Desea que la salia sea string? Si o No?: ")
-    get_fraccion_irreducible(float_numero=float_numero)#, return_string=string_info.lower() == 'si')
+    get_fraccion_irreducible(float_numero=float_numero)
     input("presione ENTER para cerrar la aplicacion")
 
 

@@ -4,7 +4,7 @@
 get_mcd <- function(a, b){
   # https://www.rdocumentation.org/packages/FRACTION/versions/1.0/topics/gcd
   ifelse(b == 0, a, get_mcd(b, a%%b))
-  }
+}
 
 
 get_fraccion_irreducible <- function(float_numero){#, return_string=TRUE){
@@ -14,36 +14,34 @@ get_fraccion_irreducible <- function(float_numero){#, return_string=TRUE){
   # :return:
 
   float_numero <- as.numeric(float_numero)
-  
-  split_number <- strsplit(as.character(float_numero), '[.]')[[1]]
-  no_decimal <- split_number[1]
-  decimal <- split_number[2]
-  
-  num_decimal <- nchar(decimal)
 
-  denominador <- 10 ^ num_decimal
-  numerador <- (10 ^ num_decimal) * as.integer(no_decimal) + as.integer(decimal)
+  if (0.0001 <= float_numero &  float_numero <= 0.9999){
+    split_number <- strsplit(as.character(float_numero), '[.]')[[1]]
+    no_decimal <- split_number[1]
+    decimal <- split_number[2]
 
-  mcd <- get_mcd(a=numerador, b=denominador)
+    num_decimal <- nchar(decimal)
 
-  denominador <- denominador / mcd
-  numerador <- numerador / mcd
+    denominador <- 10 ^ num_decimal
+    numerador <- (10 ^ num_decimal) * as.integer(no_decimal) + as.integer(decimal)
 
-  print(paste(numerador, "/", denominador))
+    mcd <- get_mcd(a=numerador, b=denominador)
 
-  #if (return_string){
-  #  print(paste(numerador, "/", denominador))
-  #}else{
-  #  print(paste(numerador, ",", denominador))
-  #}
+    denominador <- denominador / mcd
+    numerador <- numerador / mcd
+
+    print(paste(numerador, "/", denominador))
+
+  }else{
+    print(paste("Numero", float_numero, "no permitido, escriba entre 0.0001 y 0.9999"))
+  }
+
 }
 
 
 main <- function () {
   float_numero <- readline(prompt = "Ingrese numero decimal:\t")
-  #string_info <- readline(prompt = "Desea que la salia sea string? Si o No?: ")
-  get_fraccion_irreducible(float_numero = float_numero)#,
-                           #return_string = tolower(string_info) == 'si')
+  get_fraccion_irreducible(float_numero = float_numero)
 }
 
 if (!interactive()){
