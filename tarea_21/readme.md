@@ -11,5 +11,8 @@ Intentaré hacerlo en Python y R.
 
 Ejemplo en Python:
 
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_21/ejemplo_python.PNG)
 
 Ejemplo en R:
+
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_21/ejemplo_R.PNG)
