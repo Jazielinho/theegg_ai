@@ -8,6 +8,8 @@ import random
 
 
 class Solitario(object):
+    texto_error = "Los textos tienen distinta longitud, ingrese en la misma por favor"
+
     # El numero 27 lo asocio al espacio en blanco
     dict_letra_entero = {x: (enum + 1) for enum, x in enumerate(string.ascii_uppercase)}
     dict_letra_entero[' '] = 27
@@ -77,7 +79,10 @@ class Solitario(object):
             :param numeros_texto_clave: lista de numeros del texto clave
             :return: lista de numeros cifrados
         '''
-        assert len(numeros_texto_original) == len(numeros_texto_clave)
+        if len(numeros_texto_original) != len(numeros_texto_clave):
+            print(Solitario.texto_error)
+            return None
+
         lista_numeros_cifrados = []
         for x in range(len(numeros_texto_original)):
             valor = numeros_texto_original[x] + numeros_texto_clave[x]
@@ -93,7 +98,10 @@ class Solitario(object):
             :param numeros_clave: lista de numeros clave
             :return: lista de numeros original
         '''
-        assert len(numeros_texto_encriptado) == len(numeros_clave)
+        if len(numeros_texto_encriptado) != len(numeros_clave):
+            print(Solitario.texto_error)
+            return None
+
         lista_numeros_original = []
         for x in range(len(numeros_texto_encriptado)):
             valor = numeros_texto_encriptado[x] - numeros_clave[x]
@@ -123,6 +131,8 @@ class Solitario(object):
                                                                  devolver_espacio_blanco=False)
 
             nuevos_numeros = Solitario.cifrar_numero(numeros_texto_original=numeros_texto, numeros_texto_clave=clave_numero)
+            if nuevos_numeros is None:
+                return None
             nuevo_texto = Solitario.convertir_listanumeros_texto(lista_numeros=nuevos_numeros,
                                                                  devolver_espacio_blanco=False)
 
@@ -151,6 +161,8 @@ class Solitario(object):
 
             numeros_texto_original = Solitario.descifrar_numero(numeros_texto_encriptado=numeros_texto_encriptado,
                                                                 numeros_clave=numeros_clave)
+            if numeros_texto_original is None:
+                return None
             texto_original = Solitario.convertir_listanumeros_texto(lista_numeros=numeros_texto_original,
                                                                     devolver_espacio_blanco=True)
             return ''.join(texto_original)
