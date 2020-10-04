@@ -88,6 +88,7 @@ def main():
     pokemon_2 = Pokemon(nombre=nombre_2, puntos_ataque=ataque_2)
 
     enfrentamiento(pokemon_1, pokemon_2)
+    input("Presione ENTER para cerrar la aplicación")
 
 
 if __name__ == '__main__':
