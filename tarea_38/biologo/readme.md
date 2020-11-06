@@ -5,7 +5,10 @@ El diagrama está compuesto de 3 partes:
 * Biologo: función principal, a partir de dos secuencias, devuelve la secuencia común.
 
 * valida_secuencia:
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_38/biologo/valida_secuencia.png)
 
 * devuelve_secuencias:
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_38/biologo/devuelve_secuencias.png)
 
 * Biologo:
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_38/biologo/Biologo.png)
