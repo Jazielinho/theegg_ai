@@ -4,7 +4,7 @@ Created on 25 jun. 2020
 '''
 
 
-def verifica_primo(numero):
+def es_primo(numero):
     '''
     Verificamos si un numero es primo
     :param numero: numero
@@ -13,7 +13,9 @@ def verifica_primo(numero):
     if numero < 2:
         # numero 1 o menor no son primos
         return False
-    for divisor in range(2, numero):
+    divisor = 2
+
+    while divisor < numero:
         if numero % divisor == 0:
             # Si el resto de la división es cero, el número no es primo
             return False
@@ -22,10 +24,12 @@ def verifica_primo(numero):
             # No es necesario verificar con todos los números posibles
             # https://bit.ly/3hCPPxG
             return True
+        divisor += 1
+
     return True
 
 
-def verifica_palindromo(numero):
+def es_palindromo(numero):
     '''
     Verifica si un número palíndromo
     :param numero: número
@@ -42,7 +46,7 @@ def verifica_palindromo(numero):
 
 def devuelve_palindromo_primo_cercano(numero):
     '''
-    Devuelve el mayor nýnero más cercano que sea primo y palíndromo
+    Devuelve el mayor número más cercano que sea primo y palíndromo
     :param numero: número
     :return: número mayor más cercano palíndromo y primo
     '''
@@ -51,9 +55,9 @@ def devuelve_palindromo_primo_cercano(numero):
     while encontrado is False:
         # Empezamos con el primer número
         numero_mayor += 1
-        if verifica_palindromo(numero=numero_mayor):
+        if es_palindromo(numero=numero_mayor):
             # Verificamos primero si es palíndromo (es más rápido que verificar si es primo)
-            if verifica_primo(numero=numero_mayor):
+            if es_primo(numero=numero_mayor):
                 # Verificamos si el número es primo
                 encontrado = True
     return numero_mayor
