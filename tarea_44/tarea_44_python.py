@@ -15,7 +15,8 @@ def valida_numero(numero):
     try:
         numero = float(numero)
         if numero.is_integer():
-            return int(numero)
+            if numero > 0:
+                return int(numero)
         return None
     except Exception as e:
         print('Error in es_entero, numero {}, e: {}'.format(numero, e))
