@@ -4,4 +4,4 @@ En este caso hay que comparar el rendimiento de dos algoritmos para calcular la 
 
 * Ejemplo en Python
 
-![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_24/ejemplo_python.PNG)
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_44/tarea_44_python.PNG)
