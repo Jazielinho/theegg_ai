@@ -1,0 +1,26 @@
+h1{
+    color: red;
+    border: 5px solid gray;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2{
+    color: blue;
+    border: 1px solid black;
+    text-align: center;
+}
+
+p{
+    color: gray;
+    text-align: center;
+}
+
+iframe{
+    width: 560;
+    height: 315;
+    margin: 0 auto;
+    background-color: #777;
+    display: block;
+    border-style:none;
+}
