@@ -58,7 +58,7 @@ busqueda_secuencial(lista, numero)
 busqueda_binaria <- function(lista, numero){
   lista_ordenada <- quick_sort(lista)
 
-  pasos = 0
+  pasos <- 0
 
   primero <- 1
   ultimo <- length(lista_ordenada)

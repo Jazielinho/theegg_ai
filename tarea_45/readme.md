@@ -38,6 +38,7 @@ Si la lista tiene longitud 16, los pasos serían: 16 -> 8 -> 4 -> 2 -> 1, un tot
 Veamos en la siguiente tabla:
 
 | Longitud | Número de pasos |
+| --- | --- |
 | 1 | 0 |
 | 2 | 1 |
 | 4 | 2 |
