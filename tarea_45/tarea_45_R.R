@@ -37,18 +37,27 @@ lista_ordenada <- quick_sort(lista)
 
 busqueda_secuencial <- function(lista, numero){
   lista_ordenada <- quick_sort(lista)
-
+  
   pasos <- 0
   encontrado <- FALSE
-
-  while(encontrado == FALSE & pasos < length(lista_ordenada)){
-    pasos <- pasos + 1
-    if (lista_ordenada[pasos] == numero)encontrado = TRUE
+  cantidad_elementos <- length(lista_ordenada)
+  
+  while(encontrado == FALSE & pasos < cantidad_elementos - 1){
+    elemento <- lista_ordenada[(pasos + 1)]
+    if (elemento == numero)encontrado <- TRUE
+    else{
+      if (pasos >= cantidad_elementos){
+        break
+      }else{
+        pasos <- pasos + 1
+      }
+    }
   }
   if(encontrado)print(paste(numero, 'encontrado'))
   else print(paste(numero, 'no encontrado'))
-  print(paste('Numero de pasos:', pasos))
+  print(paste('Numero de pasos:', pasos))  
 }
+
 
 busqueda_secuencial(lista, numero)
 
@@ -57,22 +66,26 @@ busqueda_secuencial(lista, numero)
 
 busqueda_binaria <- function(lista, numero){
   lista_ordenada <- quick_sort(lista)
-
+  
   pasos <- 0
-
+  
   primero <- 1
   ultimo <- length(lista_ordenada)
   encontrado <- FALSE
-
+  punto_medio <- NULL
+  
   while(primero <= ultimo & encontrado == FALSE){
-    pasos <- pasos + 1
-
+    
     punto_medio <- as.integer((primero + ultimo) / 2)
-
-    if(lista_ordenada[punto_medio] == numero)encontrado = TRUE
+    
+    elemento <- lista_ordenada[punto_medio]
+    
+    if(elemento == numero)encontrado = TRUE
     else{
       if(numero < lista_ordenada[punto_medio])ultimo <- punto_medio - 1
       else primero <- punto_medio + 1
+      
+      if (primero <= ultimo) pasos <- pasos + 1
     }
   }
   if(encontrado)print(paste(numero, 'encontrado'))
