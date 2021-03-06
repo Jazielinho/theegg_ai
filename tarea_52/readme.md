@@ -13,6 +13,8 @@ que el número dado. Imprimir esta nueva lista, iterando por ella.
 compuesta por un número de la lista original y la cantidad de veces que aparece en ella. Por ejemplo, si
 la lista original es [5,16,2,5,57,5,2] la nueva lista contendrá: [(5,3), (16,1), (2,2), (57,1)]
 
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_52/tarea_52_numeros.PNG)
+
 
 ## 2. Nombres: tarea_52_nombres.py
 Solicitar al usuario que ingrese los nombres de pila de los alumnos de nivel primario de una escuela,
@@ -22,5 +24,4 @@ secundario, finalizando al ingresar ?x?.
 - Informar qué nombres se repiten entre los alumnos de nivel primario y secundario.
 - Informar qué nombres de nivel primario no se repiten en los de nivel secundario.
 
-
-
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_52/tarea_52_nombres.PNG)
