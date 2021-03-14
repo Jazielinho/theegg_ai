@@ -8,7 +8,7 @@ métodos para la clase:
 * mostrar(): muestra los datos de la persona.
 * esMayorDeEdad(): devuelve un valor lógico indicando si es mayor de edad.
 
-![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_52/tarea_52_numeros.PNG)
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_49/persona.PNG)
 
 
 ## 2. Cuenta
@@ -28,4 +28,4 @@ ingresando o retirando dinero.
 hará nada.
 * retirar(cantidad): se retira una cantidad a la cuenta. La cuenta puede estar en números rojos.
 
-![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_52/tarea_52_nombres.PNG)
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_49/Cuentas.PNG)
