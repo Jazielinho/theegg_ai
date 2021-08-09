@@ -3,10 +3,7 @@ Created on 9 ago. 2020
 @author: jazielinho
 '''
 
-from typing import Any, List
-import tempfile
-import pickle
-import os
+from typing import List, Union
 import re
 import sys
 
@@ -18,19 +15,11 @@ class LZ77(object):
     def valida_string(string: str) -> bool:
         ''' valida si el tamaño del string está entre 0 y MAX_LONGITUD '''
         return 0 <= len(string) <= LZ77.MAX_LONGITUD
-    
-    @staticmethod
-    def _devuelve_peso(objeto: Any) -> int:
-        ''' devuelve el peso de un objeto en disco '''
-        with tempfile.NamedTemporaryFile() as tmp_file:
-            pickle.dump(objeto, tmp_file)
-            tmp_file.flush()
-        return os.path.getsize(tmp_file.name)
 
     @staticmethod
-    def devuelve_peso(string: str) -> int:
+    def devuelve_peso(objeto: Union[str, List]) -> int:
         ''' devuelve el peso de un objeto en disco '''
-        return sys.getsizeof(string)
+        return sys.getsizeof(objeto)
     
     @staticmethod
     def evalua_string(string_1: str, string_2: str) -> bool:
@@ -88,7 +77,7 @@ class LZ77(object):
         return lista_ubicaciones
 
     @staticmethod
-    def descomprimir(lista_comprimida: str) -> str:
+    def descomprimir(lista_comprimida: List) -> str:
         ''' utiliza el algoritmo LZ77 para descomprimir'''
         string = ''
         for m, n, s in lista_comprimida:
@@ -138,13 +127,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-        
-        
-
-
-
-
-
-    
