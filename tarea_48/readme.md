@@ -12,4 +12,6 @@
 
  Ejemplo en Python:
 
-![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_21/ejemplo_python.PNG)
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_48/ejemplo_1.PNG)
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_48/ejemplo_2.PNG)
+![](https://raw.githubusercontent.com/Jazielinho/theegg_ai/master/tarea_48/ejemplo_3.PNG)
