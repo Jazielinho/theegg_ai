@@ -133,6 +133,8 @@ def main():
     else:
         print("Los textos no coinciden")
 
+    input("Presione cualquier tecla para cerrar la aplicacion")
+
 
 if __name__ == '__main__':
     main()
